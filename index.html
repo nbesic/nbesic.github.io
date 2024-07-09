@@ -1,117 +1,91 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-  <title>Nikola Besic</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Private Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            background-color: #333;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .sidebar p {
+            font-size: 16px;
+            text-align: center;
+        }
+        .sidebar nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            display: block;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .content .biography {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="#">CV</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="IMG_8932.jpg" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Hello folks! I was born in Podgorica, Montenegro, in November 1987. I received a BSc degree in electrical engineering from the University of Montenegro (2009)
-						and an MSc degree in optics and RF engineering from Grenoble INP (2011). In 2014, after working at GIPSA-lab in Grenoble, I earned a PhD in 
-						remote sensing from L’Université Grenoble-Alpes and simultaneously a PhD from the University of Montenegro. I then served as a postdoctoral 
-						researcher at the Environmental Remote Sensing Laboratory (EPFL) in Lausanne, also collaborating with the Radar, Satellites, and Nowcasting 
-						group (MeteoSwiss) in Locarno. My career also includes research positions at the Centre for Radar Meteorology (Météo-France) in Toulouse and
-						at AgroParisTech in Nancy, before joining the French National Mapping Agency (IGN).</p>
-					
-					<p>My research primarily focuses on remote sensing and, increasingly, on the modeling of the cryosphere, atmosphere, and biosphere. Broadly, 
-						my research interests encompass statistical signal and image processing, electromagnetism, and machine learning/data mining techniques, 
-						all closely tied to Earth sciences and particularly to the challenges posed by climate change.</p>
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Nikola Besic</b></div><br>
-                <p><b>nikola.besic at ign.fr</b><br>
-                <p>Laboratoire d'Inventaire Forestier (LIF)<br>
-                ENSG - IGN<br>
-                14 Rue Girardet<br>
-                54000 Nancy <br>
-                France<br>
-                </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="#">Google Scholar</a></dd> 
-              <dd><a href="#">Twitter</a></dd>
-              <dd><a href="#">LinkedIn</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="publications">Publications</h2>
-                
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
-            </div>
-
-            
-        </div>
-
-
+    <div class="sidebar">
+        <img src="path-to-your-photo.jpg" alt="Your Photo">
+        <h1>Your Name</h1>
+        <p>Your Affiliation</p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
+    <div class="content">
+        <img src="path-to-16x9-picture.jpg" alt="16:9 Picture">
+        <div class="biography">
+            <h2>Biography</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nibh nec dui aliquet scelerisque. Donec quis lorem sed orci malesuada vestibulum. 
+                Integer egestas dolor at elit dignissim, vel fermentum nunc facilisis. Donec aliquet urna eu felis vestibulum, id tristique lorem pretium. Ut accumsan, 
+                sapien non vestibulum dapibus, sem tortor mollis purus, eu cursus nisi nulla sit amet felis.
+            </p>
+            <p>
+                Phasellus ultrices lorem in massa varius, vitae molestie mauris fringilla. Donec ut arcu vitae lorem consequat tincidunt. Aenean hendrerit nulla id 
+                turpis pulvinar, vel bibendum urna hendrerit. Duis vel eros eu felis vulputate tristique. In vestibulum, sem et ultricies vestibulum, ligula sem 
+                gravida magna, vel feugiat dolor sapien non metus.
+            </p>
+        </div>
+    </div>
 </body>
-
 </html>
