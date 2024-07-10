@@ -80,6 +80,32 @@
             font-size: 16px;
             line-height: 1.6;
         }
+        .circle-list {
+            counter-reset: list-counter; /* Reset the list counter */
+            list-style: none; /* Remove default list styling */
+            padding: 0; /* Remove default padding */
+        }
+        .circle-list li {
+            position: relative;
+            margin: 0 0 10px 30px; /* Add space for the bullet */
+            padding-left: 10px;
+        }
+        .circle-list li:before {
+            content: counter(list-counter);
+            counter-increment: list-counter; /* Increment the list counter */
+            position: absolute;
+            left: -30px; /* Position the circle */
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%; /* Make it a circle */
+            background-color: #000; /* Circle background color */
+            color: #fff; /* Number color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -104,7 +130,7 @@
         </div>
         <img src="IMG_7352.JPEG" alt="16:9 Picture">
         <div class="publications">
-            <ol reversed>
+            <ol reversed class="circle-list">
                 <li><strong>Publication 1:</strong> Description of publication 1.</li>
                 <li><strong>Publication 2:</strong> Description of publication 2.</li>
                 <li><strong>Publication 3:</strong> Description of publication 3.</li>
