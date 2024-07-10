@@ -81,7 +81,6 @@
             line-height: 1.6;
         }
         .circle-list {
-            counter-reset: list-counter; /* Reset the list counter */
             list-style: none; /* Remove default list styling */
             padding: 0; /* Remove default padding */
         }
@@ -91,8 +90,7 @@
             padding-left: 10px;
         }
         .circle-list li:before {
-            content: counter(list-counter);
-            counter-increment: list-counter; /* Increment the list counter */
+            content: attr(data-index);
             position: absolute;
             left: -30px; /* Position the circle */
             top: 0;
@@ -130,12 +128,24 @@
         </div>
         <img src="IMG_7352.JPEG" alt="16:9 Picture">
         <div class="publications">
-            <ol class="circle-list" reversed>
-                <li><strong>Publication 1:</strong> Description of publication 1.</li>
-                <li><strong>Publication 2:</strong> Description of publication 2.</li>
-                <li><strong>Publication 3:</strong> Description of publication 3.</li>
-                <!-- Add more publications as needed -->
+            <ol id="reversed-list" class="circle-list">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+                <li>Fourth item</li>
+                <li>Fifth item</li>
             </ol>
+
+            <script>
+                // JavaScript to reverse the numbers
+                const list = document.getElementById('reversed-list');
+                const items = list.getElementsByTagName('li');
+                const itemCount = items.length;
+
+                for (let i = 0; i < itemCount; i++) {
+                    items[i].setAttribute('data-index', itemCount - i);
+                }
+            </script>
         </div>
     </div>
 </body>
