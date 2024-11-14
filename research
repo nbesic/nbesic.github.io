@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.50, maximum-scale=2.0, minimum-scale=0.50">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Nikola Besic - Research</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            background-color: #048B9A;
+            color: #f4f4f4;
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .sidebar p {
+            font-size: 16px;
+            text-align: center;
+        }
+        .sidebar nav a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px 0;
+            display: block;
+        }
+        .sidebar a {
+            color: inherit; /* Keep the color same as the parent element */
+            text-decoration: none; /* Remove underline */
+        }
+        .sidebar a:visited {
+            color: inherit;
+        }
+        .sidebar a:hover {
+            color: inherit;
+        }
+        .sidebar a:active {
+            color: inherit;
+        }
+        .sidebar a i {
+            color: inherit;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-left: 250px;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .content .biography {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="IMG_9682.JPEG" alt="Your Photo">
+        <h1>Nikola Besic &nbsp <a href="https://orcid.org/0000-0002-2597-4042" target="_blank"><i class="fab fa-orcid" style="font-size:24px"></i></a></h1>
+        <p>Laboratoire d'Inventaire Forestier (LIF), ENSG - IGN</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>
+            <a href="https://scholar.google.fr/citations?user=gztS0AIAAAAJ&hl=fr" target="_blank"><i class="fa fa-graduation-cap" style="font-size:36px"></i></a> &nbsp
+            <a href="https://linkedin.com/in/nikola-besic" target="_blank"><i class="fab fa-linkedin" style="font-size:36px"></i></a> &nbsp
+            <a href="https://x.com/niko_besic" target="_blank"><i class="fab fa-twitter-square" style="font-size:36px"></i></a>
+        </p>
+    </div>
+    <div class="content">
+        <div class="biography">
+            <h2 style="color:#DFAF2C";> Here are some of the questions I&apos;ve been looking to address: </h2>
+        </div>
+        
+    </div>
+</body>
+</html>
