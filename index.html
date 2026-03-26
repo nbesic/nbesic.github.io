@@ -66,6 +66,14 @@
             font-size: 20px;
             margin: 10px 0;
             display: block;
+            font-weight: normal;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar nav a.active {
+            font-weight: bold;
+            opacity: 1;
         }
 
         .sidebar a,
@@ -426,5 +434,34 @@
             items[i].setAttribute('data-index', itemCount - i);
         }
     </script>
+
+    <script>
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.sidebar nav a');
+
+    function updateActiveSection() {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveSection);
+    window.addEventListener('load', updateActiveSection);
+    </script>
+    
 </body>
 </html>
