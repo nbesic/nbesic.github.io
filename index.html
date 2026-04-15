@@ -23,6 +23,7 @@
             font-family: Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
+            scroll-snap-type: y proximity;
         }
 
         .sidebar {
@@ -75,6 +76,7 @@
             color: #FFFFFF;
             opacity: 1;
         }
+
         .sidebar a,
         .sidebar a:visited,
         .sidebar a:hover,
@@ -95,10 +97,6 @@
             scroll-snap-align: start;
         }
 
-        body {
-            scroll-snap-type: y proximity;
-        }
-
         .section img.banner {
             width: 100%;
             height: auto;
@@ -106,7 +104,12 @@
             margin-bottom: 20px;
         }
 
+        .research-banner {
+            margin-bottom: 20px;
+        }
+
         .biography,
+        .research,
         .publications,
         .contact {
             font-size: 16px;
@@ -180,6 +183,7 @@
         <p style="margin: 5px;">@LIF, Géodata Paris - IGN</p>
         <nav>
             <a href="#home">Home</a>
+            <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -215,6 +219,17 @@
                     I am particularly interested in their long-term spatio-temporal monitoring - which is essential for better understanding and enhancing these dynamics.
                 </p>
             </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="research" class="section">
+            <div class="research">
+                <h2>Here are a few of the research questions that have shaped my work <i class="fa-solid fa-lightbulb"></i></h2>
+            </div>
+            <img class="banner research-banner" src="foret.jpg" alt="Forest research">
+            <img class="banner research-banner" src="atmosphere.jpg" alt="Atmosphere research">
+            <img class="banner research-banner" src="glace.jpg" alt="Cryosphere research">
         </section>
 
         <div class="section-divider"></div>
@@ -435,31 +450,30 @@
     </script>
 
     <script>
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.sidebar nav a');
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.sidebar nav a');
 
-    function updateActiveSection() {
-        let current = 'home'; // 👈 default = home
+        function updateActiveSection() {
+            let current = 'home';
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100; // small offset for better detection
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
 
-            if (window.scrollY >= sectionTop) {
-            current = section.getAttribute('id');
-            }
-        });
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
-        });
-    }
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
 
-    window.addEventListener('scroll', updateActiveSection);
-    window.addEventListener('load', updateActiveSection);
+        window.addEventListener('scroll', updateActiveSection);
+        window.addEventListener('load', updateActiveSection);
     </script>
-    
 </body>
 </html>
