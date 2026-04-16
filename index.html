@@ -158,6 +158,52 @@
             margin: 0 20px;
         }
 
+        .publication-item {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Highlighted block */
+        .featured-publication {
+            background: #f7f9fc;
+            border: 1px solid #dbe4f0;
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+            "top top"
+            "left right";
+            gap: 12px 20px;
+        }
+
+        /* Top publication */
+        .featured-top {
+            grid-area: top;
+        }
+
+        /* Bottom left text */
+        .featured-left {
+            grid-area: left;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        /* Bottom right image */
+        .featured-right {
+            grid-area: right;
+            text-align: right;
+        }
+
+        .featured-right img {
+            max-width: 140px;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #cfd8e3;
+        }
+
         @media (max-width: 900px) {
             .sidebar {
                 position: relative;
@@ -175,6 +221,20 @@
 
             body {
                 scroll-snap-type: none;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "top"
+                    "left"
+                    "right";
+            }
+
+            .featured-right {
+                text-align: left;
             }
         }
     </style>
@@ -304,12 +364,28 @@
                         <i>IEEE/CVF Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)</i>, pp. 1395-1406, 2025. DOI: <a href="https://doi.org/10.1109/CVPR52734.2025.00138" target="_blank">10.1109/CVPR52734.2025.00138</a>.<br>
                         <i style="color:#4682B4;">Open access (pdf <i class="fa-solid fa-arrow-right"></i> <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Fogel_Open-Canopy_Towards_Very_High_Resolution_Forest_Monitoring_CVPR_2025_paper.html" target="_blank">CVF link</a>)</i>
                     </li>
-                    <li><b>N. Besic</b>, N. Picard, C. Vega, J.-D. Bontemps, L. Hertzog, J.-P. Renaud, F. Fogel, M. Schwartz,
-                        A. Pellissier-Tanon, G. Destouet, F. Mortier, M. Planells-Rodriguez, and P. Ciais, “Remote sensing-based
-                        forest canopy height mapping: some models are useful, but might they provide us with even more insights
-                        when combined?,” <i>Geoscientific Model Development</i>, 18, 337–359, 2025. DOI:
-                        <a href="https://doi.org/10.5194/gmd-18-337-2025" target="_blank">10.5194/gmd-18-337-2025</a>.<br>
-                        <i style="color:#4682B4;">Open access (pdf <i class="fa-solid fa-arrow-right"></i> DOI link)</i>
+                    <li class="publication-item featured-publication">
+                    <div class="featured-grid">
+
+                    <div class="featured-top">
+                    <b>N. Besic</b>, N. Picard, C. Vega, J.-D. Bontemps, L. Hertzog, J.-P. Renaud, F. Fogel, M. Schwartz, A. Pellissier-Tanon,
+                    G. Destouet, F. Mortier, M. Planells-Rodriguez, and P. Ciais, “Remote sensing-based forest canopy height mapping: some models are useful,
+                    but might they provide us with even more insights when combined?,” <i>Geoscientific Model Development</i>, 18, 337–359, 2025. DOI:
+                    <a href="https://doi.org/10.5194/gmd-18-337-2025" target="_blank">10.5194/gmd-18-337-2025</a>.<br>
+                    <i style="color:#4682B4;">Open access (pdf <i class="fa-solid fa-arrow-right"></i> DOI link)</i>
+                    </div>
+
+                    <div class="featured-left">
+                    This paper explores how combining multiple canopy height models
+                    can improve predictions and reveal additional spatial patterns
+                    compared to single-model approaches.
+                    </div>
+
+                    <div class="featured-right">
+                        <img src="images/gmd_2025_canopy_height.jpg" alt="Paper figure">
+                    </div>
+
+                    </div>
                     </li>
                     <li><b>N. Besic</b>, S. Durrieu, A. Schleich, and C. Vega, “Using structural class pairing to address the spatial mismatch
                         between GEDI measurements and NFI plots,” <i>IEEE Journal of Selected Topics in Applied Earth Observations and
