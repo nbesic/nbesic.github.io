@@ -172,12 +172,11 @@
         
         .featured-grid {
             display: grid;
-            grid-template-columns: 3fr 2fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-areas:
                 "top top"
                 "left right";
             gap: 12px 20px;
-            align-items: stretch;
         }
 
         /* Top publication */
@@ -188,30 +187,23 @@
         /* Bottom left text */
         .featured-left {
             grid-area: left;
-            display: flex;
-            align-items: center;
-        }
-
-        .featured-left-text {
-            width: 100%;
             font-size: 1.1rem;
             color: #4682B4;
             text-align: justify;
-        }
-
-       .featured-right {
-            grid-area: right;
             display: flex;
             align-items: center;
+        }
+
+        /* Bottom right image */
+        .featured-right {
+            grid-area: right;
         }
 
         .featured-right img {
             width: 100%;
             height: auto;
-            transform: scale(0.9);
-            transform-origin: center;
-            border-radius: 6px;
             display: block;
+            border-radius: 1px;
         }
 
         @media (max-width: 900px) {
