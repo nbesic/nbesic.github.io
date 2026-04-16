@@ -189,19 +189,20 @@
             grid-area: left;
             font-size: 0.95rem;
             color: #333;
+            text-align: justify;
         }
 
         /* Bottom right image */
         .featured-right {
             grid-area: right;
-            text-align: right;
         }
 
         .featured-right img {
-            max-width: 140px;
+            width: 100%;
             height: auto;
             border-radius: 6px;
-            border: 1px solid #cfd8e3;
+            /*border: 1px solid #cfd8e3;*/
+            display: block;
         }
 
         @media (max-width: 900px) {
