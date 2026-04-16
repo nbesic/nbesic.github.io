@@ -171,42 +171,40 @@
             box-sizing: border-box;
         }
 
-        /* Grid layout */
         .featured-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas:
-                "top top"
-                "left right";
+            grid-template-columns: 3fr 2fr;
             gap: 12px 20px;
             align-items: center;
         }
 
-        /* Top publication */
-        .featured-top {
-            grid-area: top;
+        /* LEFT COLUMN = stacked */
+        .featured-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        /* Bottom left text */
-        .featured-left {
-            grid-area: left;
+        /* publication */
+        .featured-top {
+            margin-bottom: 8px;
+        }
+
+        /* description */
+        .featured-text {
             font-size: 1.1rem;
             color: #4682B4;
             text-align: justify;
-            display: flex;
-            align-items: center;
         }
 
-        /* Bottom right image */
+        /* RIGHT COLUMN */
         .featured-right {
-            grid-area: right;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .featured-right img {
-            display: block;
             width: 65%;
             max-width: 100%;
             height: auto;
@@ -234,30 +232,14 @@
             }
         }
 
-        /* Featured publications on small screens */
         @media (max-width: 700px) {
             .featured-grid {
                 grid-template-columns: 1fr;
-                grid-template-areas:
-                    "top"
-                    "left"
-                    "right";
-                gap: 12px;
-            }
-
-            .featured-left {
-                display: block;
-            }
-
-            .featured-right {
-                display: block;
-                width: 100%;
             }
 
             .featured-right img {
                 width: 100%;
-                max-width: 300px;
-                height: auto;
+                max-width: none;
             }
         }
     </style>
@@ -380,26 +362,30 @@
                     <li class="publication-item featured-publication">
                         <div class="featured-grid">
 
-                        <div class="featured-top">
-                            <b>N. Besic</b>, N. Picard, C. Vega, J.-D. Bontemps, L. Hertzog, J.-P. Renaud, F. Fogel, M. Schwartz, A. Pellissier-Tanon,
-                            G. Destouet, F. Mortier, M. Planells-Rodriguez, and P. Ciais, “Remote sensing-based forest canopy height mapping: some models are useful,
-                            but might they provide us with even more insights when combined?,” <i>Geoscientific Model Development</i>, 18, 337–359, 2025. DOI:
-                            <a href="https://doi.org/10.5194/gmd-18-337-2025" target="_blank">10.5194/gmd-18-337-2025</a>.<br>
-                            <i style="color:#4682B4;">Open access (pdf <i class="fa-solid fa-arrow-right"></i> DOI link)</i>
-                        </div>
-
+                        <!-- LEFT COLUMN -->
                         <div class="featured-left">
-                            <div class="featured-left-text">
+
+                            <div class="featured-top">
+                                <b>N. Besic</b>, N. Picard, C. Vega, J.-D. Bontemps, L. Hertzog, J.-P. Renaud, F. Fogel, M. Schwartz, A. Pellissier-Tanon,
+                                G. Destouet, F. Mortier, M. Planells-Rodriguez, and P. Ciais, “Remote sensing-based forest canopy height mapping: some models are useful,
+                                but might they provide us with even more insights when combined?,” <i>Geoscientific Model Development</i>, 18, 337–359, 2025. DOI:
+                                <a href="https://doi.org/10.5194/gmd-18-337-2025" target="_blank">10.5194/gmd-18-337-2025</a>.<br>
+                                <i style="color:#4682B4;">Open access (pdf <i class="fa-solid fa-arrow-right"></i> DOI link)</i>
+                            </div>
+
+                            <div class="featured-text">
                                 This paper highlights the importance of ensemble modelling when combining diverse remote sensing approaches for carbon mapping. 
                                 It also underscores the key role of understanding and analysing uncertainties in spatial predictions, which lies at the core of my research.
                             </div>
+
                         </div>
 
+                        <!-- RIGHT COLUMN -->
                         <div class="featured-right">
                             <img src="fig_BMA_H.jpg" alt="Paper figure">
                         </div>
 
-                    </div>
+                        </div>
                     </li>
                     <li>Y. Su, M. Schwartz, I. Fayad, M. Garcia, M. Zavala, J. Tĳerin-Trivino, J. Astigarraga, V. Cruz-Alonso, S. Liu, X. Zhang,
                         S. Chen, F. Ritter, <b>N. Besic</b>, A. d’Aspremont, and P. Ciais, “Canopy height and biomass distribution across the forests
